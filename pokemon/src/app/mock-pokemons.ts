@@ -2,7 +2,7 @@ import { Pokemon } from "./Models/pokemon";
 
 export const POKEMONS: Pokemon[] =[
     {
-    id: 1,
+    id: 13,
     hp: 25,
     cp: 5,
     name: 'Balbizarre',
@@ -21,7 +21,7 @@ export const POKEMONS: Pokemon[] =[
         },
 
         {
-            id: 1,
+            id: 134,
             hp: 25,
             cp: 5,
             name: 'Salameche',
