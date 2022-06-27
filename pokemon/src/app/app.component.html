@@ -5,10 +5,7 @@
  type="number"
  
  />
- <p>{{pokemonSelected?.name}}</p>
-  <p> {{pokemonList[0].name}} </p>
-  <p> {{pokemonList[1].name}} </p>
-  <p> {{pokemonList[2].name}} </p>
-  <p> {{pokemonList[3].name}} </p>
+ <p *ngFor="let pok of pokemonList">{{pok.name}}</p>
+ 
   
   
