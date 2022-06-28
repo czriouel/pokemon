@@ -1,11 +1,25 @@
- <h1>Liste de pockemons</h1>
- <input
- #input
- (keyup.enter)="selectPokemon(input.value)"
- type="number"
+ <h1 class="center">Liste de pockemons TAREK ZRIOUEL</h1>
  
- />
- <p *ngFor="let pok of pokemonList">{{pok.name}}</p>
+
+ <div class="container">
+    <div class="row">
+        <div *ngFor="let pok of pokemonList" class="col m4 s6">
+            <div class="card horizontal" appBorderCard="#ff0000">
+                <div class="card-image">
+                    <img [src]="pok.picture" alt="imageNotExist">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                       <p>{{pok.name}}</p> 
+                       <small>{{pok.created}}</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+ </div>
+ 
  
   
   
