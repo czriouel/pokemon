@@ -1,24 +1,15 @@
- <h1 class="center">Liste de pockemons TAREK ZRIOUEL</h1>
- 
-
- <div class="container">
-    <div class="row">
-        <div *ngFor="let pok of pokemonList" class="col m4 s6">
-            <div class="card horizontal" appBorderCard="#ff0000">
-                <div class="card-image">
-                    <img [src]="pok.picture" alt="imageNotExist">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                       <p>{{pok.name}}</p> 
-                       <small>{{pok.created}}</small>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Tarek</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a (click)="goToPokeonList()">List Pokemons</a></li>
+        <li><a href="badges.html">Components</a></li>
+       </ul>
     </div>
- </div>
+  </nav>
+
+    <router-outlet></router-outlet>
+
  
  
   

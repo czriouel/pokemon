@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { POKEMONS } from './mock-pokemons';
-import { Pokemon } from './Models/pokemon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +7,12 @@ import { Pokemon } from './Models/pokemon';
 
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
+
+  constructor(private router: Router){}
    //title = 'pokemon';
-   pokemonList: Pokemon[] = POKEMONS;
-   pokemonSelected:Pokemon | undefined;
-
-ngOnInit() {
-  console.table(this.pokemonList);
- 
-}
-
-//selectPokemon(pokemon: Pokemon) {
+   
+  /* //selectPokemon(pokemon: Pokemon) {
   selectPokemon(pokemonId:string) {
 
     const pokemon: Pokemon|undefined = this.pokemonList.find(pokemon => pokemon.id == +pokemonId );
@@ -30,7 +24,7 @@ ngOnInit() {
       console.log('Vous avez Choisi un pokemon qui n existe pas ');
       this.pokemonSelected = pokemon;
     }
-    
+     */
 
    // const index: number = +(event?.target as HTMLInputElement).value;
   //const id = +pokemonId;
@@ -39,6 +33,11 @@ ngOnInit() {
   //const index = id - 1;
    
   //console.log(`Vous avez cliquer sur le pokemon + ${pokemon.name}`);
+
+
+  goToPokeonList(){
+    this.router.navigate(['/pokemons']);
   }
-}
+  }
+
 
