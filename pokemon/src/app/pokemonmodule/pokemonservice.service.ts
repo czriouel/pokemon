@@ -2,9 +2,11 @@
 import { POKEMONS } from './mock-pokemons';
 import { Pokemon } from './Models/pokemon';
 
-@Injectable({
+@Injectable(
+/*   {
   providedIn: 'root'
-})
+} */
+)
 export class PokemonserviceService {
 
   getPokemonList(): Pokemon[] {

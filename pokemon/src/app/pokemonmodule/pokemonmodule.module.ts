@@ -5,6 +5,7 @@ import { DetailspokemonComponent } from './detailspokemon/detailspokemon.compone
 import { BorderCardDirective } from './border-card.directive';
 import { PokTypeColorPipe } from './pok-type-color.pipe';
 import { RouterModule, Routes } from '@angular/router';
+import { PokemonserviceService } from './pokemonservice.service';
 
 
 const pokemonRoutes: Routes = [
@@ -28,6 +29,7 @@ const pokemonRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(pokemonRoutes)
-  ]
+  ],
+  providers:[PokemonserviceService]
 })
 export class PokemonmoduleModule { }
